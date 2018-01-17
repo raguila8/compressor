@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Run-Length Encoding</title>
+		<link rel="stylesheet" type="text/css" href="css/compression.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+		<script src="js/compression.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      		<a class="navbar-brand" href="index.html">Compressor</a>
+    		</div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Run-Length Encoding</a></li>
+      <li><a href="#">Burrows-Wheeler Transform</a></li>
+      <li><a href="#">LZW Compression</a></li>
+    </ul>
+  </div>
+</nav>
+		<div class="container">
+			<div class="jumbotron">
+				<h1 id="compressionType">Run-Length Encoding</h1>      
+				<p id="RLEDescription">Run-Length Encoding (RLE) is a very simple data compression
+						algorithm that consists in describing a string according to its
+						repetitions. Sequences of the same character are replaced by the 
+						length of the sequence followed by the character in question. RLE 
+						works well with repeated data on the level of individual 
+						characters. </p>
+				<p id="BWTDescription" class="hide">The Burrows-Wheeler Transform (BWT) 
+					is a data compression algorithm that maximizes repeated letters in a 
+					text. BWT rearranges a character string into runs of similar 
+					characters. It was invented by Michael Burrows and David Wheeler
+					in 1994 while 
+					Burrows was working ar DEC Systems Research Center in Palo Alto, CA.
+				</p>
+				<p id="LZWDescription" class="hide">LZW description</p>
+			</div>
+			<form id="encode-form">
+				<label for="encode">Encode:</label>
+				<br>
+				<textarea name="encode" id="encode" cols="100" rows="7"></textarea>
+				<br>
+				<input type="submit">
+			</form>
+			<br>
+			<br>
+			<form id="decode-form">
+				<label for="decode">Decode:</label>
+				<br>
+				<textarea name="decode" id="decode"cols="100" rows="7"></textarea>
+				<br>
+				<input type="submit">
+			</form>
+			<br>
+			<br>
+			<div class="well well-md hide">
+				<center>Result</center>
+				<p id="result"></p>
+			</div>
+		</div>
+	</body>
+</html>
